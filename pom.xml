@@ -26,11 +26,11 @@
 
     <modules>
         <module>data-collector-api</module>
-        <module>data-collector-testutils</module>
-        <module>data-collector-content-store-rawdata-provider</module>
-        <module>data-collector-javascript-processor</module>
-        <module>data-collector-core</module>
         <module>data-collector-server</module>
+        <module>data-collector-testutils</module>
+        <module>data-collector-javascript-processor</module>
+        <module>data-collector-content-store-rawdata-provider</module>
+        <module>data-collector-core</module>
     </modules>
 
 </project>
