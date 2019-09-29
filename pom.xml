@@ -7,7 +7,11 @@
     <artifactId>data-collector-project</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
+
     <name>Data Collector Project</name>
+    <description>Data Collector Project</description>
+    <url>https://github.com/statisticsnorway/</url>
+    <inceptionYear>2019</inceptionYear>
 
     <properties>
         <java.version>11</java.version>
@@ -19,6 +23,15 @@
 
         <testng.version>6.14.3</testng.version>
     </properties>
+
+    <modules>
+        <module>data-collector-api</module>
+        <module>data-collector-testutils</module>
+        <module>data-collector-content-store-rawdata-provider</module>
+        <module>data-collector-javascript-processor</module>
+        <module>data-collector-core</module>
+        <module>data-collector-server</module>
+    </modules>
 
 </project>
 

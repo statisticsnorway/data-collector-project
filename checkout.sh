@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-echo "git clone git@github.com:statisticsnorway/data-collector-project.git"
-git clone git@github.com:statisticsnorway/data-collector-project.git
-
 echo "git clone git@github.com:statisticsnorway/data-collector-api.git"
 git clone git@github.com:statisticsnorway/data-collector-api.git
 

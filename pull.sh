@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-echo "git -C data-collector-project/ pull --rebase"
-git -C data-collector-project/ pull --rebase
+echo "git -C . pull --rebase"
+git -C ./ pull --rebase
 
 echo "git -C data-collector-api/ pull --rebase"
 git -C data-collector-api/ pull --rebase
