@@ -32,6 +32,7 @@
         <module>data-collector-content-store-rawdata-provider</module>
         <module>data-collector-core</module>
         <module>data-collector-server</module>
+        <module>data-collector-samples</module>
     </modules>
 
 </project>
