@@ -18,8 +18,8 @@ git clone git@github.com:statisticsnorway/data-collector-javascript-processor.gi
 echo "git clone git@github.com:statisticsnorway/data-collector-core.git"
 git clone git@github.com:statisticsnorway/data-collector-core.git
 
-echo "git clone git@github.com:statisticsnorway/data-collector-server.git"
-git clone git@github.com:statisticsnorway/data-collector-server.git
+echo "git clone git@github.com:statisticsnorway/data-collector-docker.git"
+git clone git@github.com:statisticsnorway/data-collector-docker.git
 
 echo "git clone git@github.com:statisticsnorway/data-collector-samples.git"
 git clone git@github.com:statisticsnorway/data-collector-samples.git

@@ -21,8 +21,8 @@ git -C data-collector-javascript-processor/ pull --rebase
 echo "git -C data-collector-core/ pull --rebase"
 git -C data-collector-core/ pull --rebase
 
-echo "git -C data-collector-server/ pull --rebase"
-git -C data-collector-server/ pull --rebase
+echo "git -C data-collector-docker/ pull --rebase"
+git -C data-collector-docker/ pull --rebase
 
 echo "git -C data-collector-samples/ pull --rebase"
 git -C data-collector-samples/ pull --rebase
