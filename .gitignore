@@ -42,6 +42,6 @@ dependency-reduced-pom.xml
 
 **/target
 
-**/certs
+**/*certs
 
 data-collector-*/
