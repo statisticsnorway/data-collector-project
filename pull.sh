@@ -27,3 +27,5 @@ git -C data-collector-docker/ pull --rebase
 echo "git -C data-collector-samples/ pull --rebase"
 git -C data-collector-samples/ pull --rebase
 
+echo "git -C be-data-collection-consumers/ pull --rebase"
+git -C be-data-collection-consumers/ pull --rebase

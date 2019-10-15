@@ -47,3 +47,4 @@ dependency-reduced-pom.xml
 **/*certs.tgz
 
 data-collector-*/
+be-data-collection-consumers/
