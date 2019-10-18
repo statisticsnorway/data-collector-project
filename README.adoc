@@ -41,10 +41,9 @@ The Data Collector (DC) is a framework for consuming REST APIs where collected d
 [source,java,linenum]
 ----
 SpecificationBuilder feedBuilder = Specification.start("", "loop")
-        .configure(
-                context()
-                        .topic("topic")
-                        .variable("nextPosition", "${contentStream.hasLastPosition() ? contentStream.lastPosition() : 1}")
+        .configure(context()
+                .topic("topic")
+                .variable("nextPosition", "${contentStream.hasLastPosition() ? contentStream.lastPosition() : 1}")
         )
         .function(paginate("loop")
                 .variable("fromPosition", "${nextPosition}")
