@@ -34,6 +34,7 @@ This documentation is work in progress!
 
 The Data Collector (DC) is a framework for consuming REST APIs where collected data is written to streams. The DC executes a declarative Specification at runtime that describes how data should be collected. The Specification is built using a well defined DSL.
 
+Example of use: https://github.com/statisticsnorway?utf8=✓&q=linked-data-store[Statistics Norway's Consumer Specifications].
 
 ifdef::env-github[]
 = Table of Contents
