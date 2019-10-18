@@ -34,65 +34,18 @@ This documentation is work in progress!
 
 The Data Collector (DC) is a framework for consuming REST APIs where collected data is written to streams. The DC executes a declarative Specification at runtime that describes how data should be collected. The Specification is built using a well defined DSL.
 
-== Getting started
 
-=== DSL
-
-[source,java,linenum]
-----
-SpecificationBuilder feedBuilder = Specification.start("", "loop")
-        .configure(context()
-                .topic("topic")
-                .variable("nextPosition", "${contentStream.hasLastPosition() ? contentStream.lastPosition() : 1}")
-        )
-        .function(paginate("loop")
-                .variable("fromPosition", "${nextPosition}")
-                .addPageContent()
-                .iterate(execute("page"))
-                .prefetchThreshold(15)
-                .until(whenVariableIsNull("nextPosition"))
-        )
-        .function(get("page")
-                .url("http://example.com/feed?pos=${fromPosition}&size=10")
-                .validate(status().success(200, 299))
-                .pipe(sequence(xpath("/feed/entry"))
-                        .expected(xpath("/entry/id"))
-                )
-                .pipe(nextPage()
-                        .output("nextPosition", regex(xpath("/feed/link[@rel=\"next\"]/@href"), "(?<=[?&]pos=)[^&]*"))
-                )
-                .pipe(parallel(xpath("/feed/entry"))
-                        .variable("position", xpath("/entry/id"))
-                        .pipe(addContent("${position}", "entry"))
-                        .pipe(publish("${position}"))
-                )
-                .returnVariables("nextPosition")
-        );
-----
-
-=== Run
-
-[source,java,linenum]
-----
-Worker.newBuilder()
-        .configuration(Map.of(
-                "content.stream.connector", "rawdata",
-                "rawdata.client.provider", "memory")
-        )
-        .specification(feedBuilder)
-        .printExecutionPlan()
-        .build()
-        .run();
-----
 
 ifdef::env-github[]
 = Table of Contents
 
+. link:docs/gettingstarted.adoc[Getting started]
 . link:docs/administration.adoc[Administration]
 endif::[]
 
 ifndef::env-github[]
 :leveloffset: +1
+include::docs/gettingstarted.adoc[]
 include::docs/administration.adoc[]
 :leveloffset: -1
 endif::[]
