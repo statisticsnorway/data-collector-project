@@ -29,7 +29,7 @@
         <module>data-collector-server-base</module>
         <module>data-collector-testutils</module>
         <module>data-collector-javascript-processor</module>
-        <module>data-collector-provider-content-store-rawdata</module>
+        <module>data-collector-connector-content-stream-rawdata</module>
         <module>data-collector-core</module>
         <module>data-collector-docker</module>
         <module>data-collector-samples</module>

@@ -9,8 +9,8 @@ git clone git@github.com:statisticsnorway/data-collector-server-base.git
 echo "git clone git@github.com:statisticsnorway/data-collector-testutils.git"
 git clone git@github.com:statisticsnorway/data-collector-testutils.git
 
-echo "git clone git@github.com:statisticsnorway/data-collector-provider-content-store-rawdata.git"
-git clone git@github.com:statisticsnorway/data-collector-provider-content-store-rawdata.git
+echo "git clone git@github.com:statisticsnorway/data-collector-connector-content-stream-rawdata.git"
+git clone git@github.com:statisticsnorway/data-collector-connector-content-stream-rawdata.git
 
 echo "git clone git@github.com:statisticsnorway/data-collector-javascript-processor.git"
 git clone git@github.com:statisticsnorway/data-collector-javascript-processor.git
