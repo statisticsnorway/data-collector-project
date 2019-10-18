@@ -1,0 +1,55 @@
+= Architecture
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+:toc-placement: preamble
+endif::[]
+
+
+== Pre-requisites
+
+* Java 11 or 12. Because of GraalVM dependencies, Java 13 is yet not supported.
+* Docker CE 18+
+* Docker Compose 1.2x+
+
+== Modules
+
+The Data Collector uses JPMS (module system) for strong encapsulation, security and maintenance.
+
+.modules
+|===
+|Module name |Status |Description
+
+|data-collector-api
+|Stable
+|Builders and interfaces
+
+|data-collector-core
+|Stable
+|Graph handlers and Executor
+
+|data-collector-javascript-processor
+|Incomplete
+|Javascript processors
+
+|data-collector-provider-content-store-rawdata
+|Stable
+|Connector for Rawdata Streams
+
+|data-collector-server-base
+|Stable
+|Data collector application
+
+|data-collector-docker
+|Stable
+|Docker image with embedded web server
+
+|data-collector-testutils
+|Stable
+|Testserver with mock data
+
+|===
+

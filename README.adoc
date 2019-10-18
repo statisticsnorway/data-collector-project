@@ -35,20 +35,28 @@ This documentation is work in progress!
 The Data Collector (DC) is a framework for consuming REST APIs where collected data is written to streams. The DC executes a declarative Specification at runtime that describes how data should be collected. The Specification is built using a well defined DSL.
 
 
-
 ifdef::env-github[]
 = Table of Contents
 
 . link:docs/gettingstarted.adoc[Getting started]
+. link:docs/architecture.adoc[Architecture]
 . link:docs/administration.adoc[Administration]
 endif::[]
 
 ifndef::env-github[]
 :leveloffset: +1
 include::docs/gettingstarted.adoc[]
+include::docs/architecture.adoc[]
 include::docs/administration.adoc[]
 :leveloffset: -1
 endif::[]
+
+== Roadmap
+
+* Task scheduler (schedule a worker that executes a specification)
+* Health resource
+* Improve test coverage
+* Improve code base
 
 == License
 

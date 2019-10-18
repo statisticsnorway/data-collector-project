@@ -12,7 +12,106 @@ endif::[]
 
 == Getting started
 
-=== DSL
+=== REST API
+
+==== Specification DSL
+
+[source,yml,linenum]
+----
+---
+type: "Specification"
+name: ""
+startFunctionId: "loop"
+configure:
+- type: "SpecificationContext"
+  variables:
+    nextPosition: "${contentStream.hasLastPosition() ? contentStream.lastPosition()\
+      \ : 1}"
+  globalState:
+    global.topic: "topic"
+functions:
+  loop:
+    type: "Paginate"
+    id: "loop"
+    variables:
+      fromPosition: "${nextPosition}"
+    threshold: 15
+    addPageContent: true
+    iterate:
+    - type: "Execute"
+      executeId: "page"
+    until:
+      type: "ConditionWhenVariableIsNull"
+      identifier: "nextPosition"
+  page:
+    type: "Get"
+    id: "page"
+    url: "http://example.com/feed?pos=${fromPosition}&size=10"
+    returnVariables:
+    - "nextPosition"
+    responseValidators:
+    - type: "HttpStatusValidation"
+      success:
+      - 200
+    pipes:
+    - type: "Sequence"
+      splitQuery:
+        type: "QueryXPath"
+        expression: "/feed/entry"
+      expectedQuery:
+        type: "QueryXPath"
+        expression: "/entry/id"
+    - type: "NextPage"
+      outputs:
+        nextPosition:
+          type: "QueryRegEx"
+          expression: "(?<=[?&]pos=)[^&]*"
+          query:
+            type: "QueryXPath"
+            expression: "/feed/link[@rel=\"next\"]/@href"
+    - type: "Parallel"
+      variables:
+        position:
+          type: "QueryXPath"
+          expression: "/entry/id"
+      splitQuery:
+        type: "QueryXPath"
+        expression: "/feed/entry"
+      pipes:
+      - type: "AddContent"
+        positionVariableExpression: "${position}"
+        contentKey: "entry"
+      - type: "Publish"
+        positionVariableExpression: "${position}"
+----
+
+==== Execute specification
+
+[cols="h,5a"]
+|===
+| PUT
+| /task
+| Request Body
+| [source,json]
+----
+SPECIFICATION_PAYLOAD
+----
+| Response codes
+| [cols="h,2"]
+!===
+! 201
+! Job started
+! 400
+! Bad request
+! 404
+! Resource not found
+!===
+|===
+
+
+=== Library
+
+==== Specification DSL
 
 [source,java,linenum]
 ----
@@ -30,7 +129,7 @@ SpecificationBuilder feedBuilder = Specification.start("", "loop")
         )
         .function(get("page")
                 .url("http://example.com/feed?pos=${fromPosition}&size=10")
-                .validate(status().success(200, 299))
+                .validate(status().success(200))
                 .pipe(sequence(xpath("/feed/entry"))
                         .expected(xpath("/entry/id"))
                 )
@@ -46,7 +145,7 @@ SpecificationBuilder feedBuilder = Specification.start("", "loop")
         );
 ----
 
-=== Run
+==== Execute specification
 
 [source,java,linenum]
 ----
