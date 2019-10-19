@@ -21,6 +21,7 @@ endif::[]
 The Data Collector uses JPMS (module system) for strong encapsulation, security and maintenance.
 
 .modules
+[cols="<,^,^,<", options="header"]
 |===
 |Module name |Status |Badges |Description
 
