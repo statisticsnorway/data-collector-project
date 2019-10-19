@@ -10,7 +10,7 @@ ifdef::env-github[]
 endif::[]
 
 
-== Getting started
+== Use cases
 
 === REST API
 
@@ -25,8 +25,7 @@ startFunctionId: "loop"
 configure:
 - type: "SpecificationContext"
   variables:
-    nextPosition: "${contentStream.hasLastPosition() ? contentStream.lastPosition()\
-      \ : 1}"
+    nextPosition: "${contentStream.lastOrInitialPosition(1)}"
   globalState:
     global.topic: "topic"
 functions:
@@ -109,7 +108,7 @@ SPECIFICATION_PAYLOAD
 |===
 
 
-=== Library
+=== Library (emed in your own application)
 
 ==== Specification DSL
 
@@ -118,7 +117,7 @@ SPECIFICATION_PAYLOAD
 SpecificationBuilder feedBuilder = Specification.start("", "loop")
         .configure(context()
                 .topic("topic")
-                .variable("nextPosition", "${contentStream.hasLastPosition() ? contentStream.lastPosition() : 1}")
+                .variable("nextPosition", "${contentStream.lastOrInitialPosition(1)}")
         )
         .function(paginate("loop")
                 .variable("fromPosition", "${nextPosition}")

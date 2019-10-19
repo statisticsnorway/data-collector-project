@@ -23,37 +23,37 @@ The Data Collector uses JPMS (module system) for strong encapsulation, security 
 |===
 |Module name |Status |Description
 
-|data-collector-api
+|https://github.com/statisticsnorway/data-collector-api[data-collector-api]
 |Stable
 |Builders and interfaces
 
-|data-collector-core
+|https://github.com/statisticsnorway/data-collector-core[data-collector-core]
 |Stable
 |Graph handlers and Executor
 
-|data-collector-javascript-processor
+|https://github.com/statisticsnorway/data-collector-javascript-processor[data-collector-javascript-processor]
 |Incomplete
 |Javascript processors
 
-|data-collector-provider-content-store-rawdata
+|https://github.com/statisticsnorway/data-collector-connector-content-stream-rawdata[data-collector-connector-content-stream-rawdata]
 |Stable
 |Connector for Rawdata Streams
 
-|data-collector-server-base
+|https://github.com/statisticsnorway/data-collector-server-base[data-collector-server-base]
 |Stable
 |Data collector application
 
-|data-collector-docker
+|https://github.com/statisticsnorway/data-collector-docker[data-collector-docker]
 |Stable
 |Docker image with embedded web server
 
-|data-collector-testutils
+|https://github.com/statisticsnorway/data-collector-testutils[data-collector-testutils]
 |Stable
 |Testserver with mock data
 
-|data-collection-consumer-specifications
+|https://github.com/statisticsnorway/data-collection-consumer-specifications[data-collection-consumer-specifications]
 |Stable
-|Statistics Norway's Consumer Specifications
+|Statistics Norway's Consumer Specifications for API Data Collectiom.
 
 |===
 
