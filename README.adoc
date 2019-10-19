@@ -29,7 +29,7 @@ endif::[]
 
 [NOTE]
 ====
-This documentation is work in progress!
+This documentation is immature and work in progress!
 ====
 
 The Data Collector (DC) is a framework for consuming REST APIs where collected data is written to streams. The DC executes a declarative Specification at runtime that describes how data should be collected. The Specification is built using a well defined DSL.

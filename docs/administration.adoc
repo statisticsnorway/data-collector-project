@@ -38,7 +38,7 @@ endif::[]
 
 |content.stream.connector
 |discarding \| rawdata
-|Configures the content stream that will be written to.
+|Configures the content stream connector.
 
 |rawdata.client.provider
 |postgres

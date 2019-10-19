@@ -44,7 +44,7 @@ The Data Collector uses JPMS (module system) for strong encapsulation, security 
 |Data collector application
 
 |https://github.com/statisticsnorway/data-collector-docker[data-collector-docker]
-|Stable
+|Work in progress
 |Docker image with embedded web server
 
 |https://github.com/statisticsnorway/data-collector-testutils[data-collector-testutils]
@@ -53,7 +53,7 @@ The Data Collector uses JPMS (module system) for strong encapsulation, security 
 
 |https://github.com/statisticsnorway/data-collection-consumer-specifications[data-collection-consumer-specifications]
 |Stable
-|Statistics Norway's Consumer Specifications for API Data Collectiom.
+|Statistics Norway's Consumer Specifications for API Data Collection.
 
 |===
 
