@@ -1,4 +1,5 @@
 = Architecture
+
 ifdef::env-github[]
 :tip-caption: :bulb:
 :note-caption: :information_source:
@@ -21,38 +22,54 @@ The Data Collector uses JPMS (module system) for strong encapsulation, security 
 
 .modules
 |===
-|Module name |Status |Description
+|Module name |Status |Code quality |Test coverage |Description
 
 |https://github.com/statisticsnorway/data-collector-api[data-collector-api]
 |Stable
+|image:https://api.codacy.com/project/badge/Grade/b385055ffe4b4c12860b948da1e63bd5["Codacy code quality", link="https://www.codacy.com/manual/oranheim/data-collector-api?utm_source=github.com&utm_medium=referral&utm_content=statisticsnorway/data-collector-api&utm_campaign=Badge_Grade"]
+|(badge)
 |Builders and interfaces
 
 |https://github.com/statisticsnorway/data-collector-core[data-collector-core]
 |Stable
+|image:https://api.codacy.com/project/badge/Grade/0ea1df7767224304967fd7bf90459df5["Codacy code quality", link="https://www.codacy.com/manual/oranheim/data-collector-core?utm_source=github.com&utm_medium=referral&utm_content=statisticsnorway/data-collector-core&utm_campaign=Badge_Grade"]
+|(badge)
 |Graph handlers and Executor
 
 |https://github.com/statisticsnorway/data-collector-javascript-processor[data-collector-javascript-processor]
 |Incomplete
+|image:https://api.codacy.com/project/badge/Grade/59ebea4bd20247f49a546bc7e7f5722a["Codacy code quality", link="https://www.codacy.com/manual/oranheim/data-collector-javascript-processor?utm_source=github.com&utm_medium=referral&utm_content=statisticsnorway/data-collector-javascript-processor&utm_campaign=Badge_Grade"]
+|(badge)
 |Javascript processors
 
 |https://github.com/statisticsnorway/data-collector-connector-content-stream-rawdata[data-collector-connector-content-stream-rawdata]
 |Stable
+|image:https://api.codacy.com/project/badge/Grade/19c7b49d1711437c9d1061fddf9a2220["Codacy code quality", link="https://www.codacy.com/manual/oranheim/data-collector-connector-content-stream-rawdata?utm_source=github.com&utm_medium=referral&utm_content=statisticsnorway/data-collector-connector-content-stream-rawdata&utm_campaign=Badge_Grade"]
+|(badge)
 |Connector for Rawdata Streams
 
 |https://github.com/statisticsnorway/data-collector-server-base[data-collector-server-base]
 |Stable
+|image:https://api.codacy.com/project/badge/Grade/0637c9747680459c87fa8f237e5ecff7["Codacy code quality", link="https://www.codacy.com/manual/oranheim/data-collector-server-base?utm_source=github.com&utm_medium=referral&utm_content=statisticsnorway/data-collector-server-base&utm_campaign=Badge_Grade"]
+|(badge)
 |Data collector application
 
 |https://github.com/statisticsnorway/data-collector-docker[data-collector-docker]
 |Work in progress
+|image:https://api.codacy.com/project/badge/Grade/fa233ed462d64bbe8093fe134d2175c9["Codacy code quality", link="https://www.codacy.com/manual/oranheim/data-collector-docker?utm_source=github.com&utm_medium=referral&utm_content=statisticsnorway/data-collector-docker&utm_campaign=Badge_Grade"]
+|(badge)
 |Docker image with embedded web server
 
 |https://github.com/statisticsnorway/data-collector-testutils[data-collector-testutils]
 |Stable
+|image:https://api.codacy.com/project/badge/Grade/9c83ed6e8d0943609a793b2012879197["Codacy code quality", link="https://www.codacy.com/manual/oranheim/data-collector-testutils?utm_source=github.com&utm_medium=referral&utm_content=statisticsnorway/data-collector-testutils&utm_campaign=Badge_Grade"]
+|(badge)
 |Testserver with mock data
 
 |https://github.com/statisticsnorway/data-collection-consumer-specifications[data-collection-consumer-specifications]
 |Stable
+|image:https://api.codacy.com/project/badge/Grade/23e1c75406a744bd919b202f01d9e105["Codacy code quality", link="https://www.codacy.com/manual/oranheim/data-collection-consumer-specifications?utm_source=github.com&utm_medium=referral&utm_content=statisticsnorway/data-collection-consumer-specifications&utm_campaign=Badge_Grade"]
+|(badge)
 |Statistics Norway's Consumer Specifications for API Data Collection.
 
 |===
