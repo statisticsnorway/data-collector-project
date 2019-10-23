@@ -21,7 +21,7 @@ endif::[]
 |Binds default loopback and private IP
 
 |http.port
-|9090
+|9990
 |Binds default IP port
 
 |http.prefix
