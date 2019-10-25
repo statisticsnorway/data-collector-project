@@ -45,6 +45,7 @@ dependency-reduced-pom.xml
 **/*certs
 **/*certs.zip
 **/*certs.tgz
+**/secret/
 
 data-collector-*/
 /data-collection-consumer-specifications
