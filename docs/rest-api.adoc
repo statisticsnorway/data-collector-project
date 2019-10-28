@@ -16,7 +16,7 @@ endif::[]
 
 Create new task given a serialized specification. If same specification is already running, it will be rejected.
 
-*PUT /task*
+*PUT /tasks*
 
 *Parameters*
 
@@ -78,7 +78,7 @@ None.
 
 === Cancel task
 
-*DELETE /task/{workerId}*
+*DELETE /tasks/{workerId}*
 
 Cancel a running task.
 
