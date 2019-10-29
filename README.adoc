@@ -60,7 +60,6 @@ endif::[]
 
 * Generic builder deserializer (required for decoupling of _core_ and _api consumer specification_)
 * Task scheduler (schedule a worker that executes a specification)
-* Health resource
 * Improve test coverage
 * Improve code base
 
