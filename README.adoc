@@ -63,6 +63,11 @@ endif::[]
 * Improve test coverage
 * Improve code base
 
+== Known issues
+
+* CorrelationId is not generated correctly
+
+
 == License
 
 This software is licensed under link:LICENSE[APL 2.0]
