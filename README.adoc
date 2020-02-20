@@ -67,6 +67,15 @@ endif::[]
 
 * CorrelationId is not generated correctly
 
+== New and improved features
+
+* Implemented `JqPathHandler` using Jackson-JQ to support Json Path in the DSL
+* Added `bodyContains` to Query DSL to support false negative intentionally, e.g. 404 with a response semantics that should be treated as success, will not cause the collector to fail fast. Please note: existing consumer specifications in json or yaml format, must be updated due to changes in the DSL.
+* Java 11 HttpClient causes severe memory leaks, which was fixed in Java 13. Consequently the Data Collector now requires Java 13+
+* Moved to JUnit 5. Implemented an extension where the test server lifecycle is managed by the `ExtensionContext.Store`. This alleviates the lack of enforced JPMS due to incompatibility between TestNG and Surefire. The latest surefire version 3.0.0-M4 is compatible with JUnit 5 and offers better compatibility with JPMS.
+* Major improvement to the `MockDataController` that provides internal resources ("api simulation") for testing. `FreemarkerTemplateEngine` is used for simplicity/readability and increased maintainability of api simulations.
+
+
 
 == License
 
