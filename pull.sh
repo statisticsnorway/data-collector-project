@@ -24,6 +24,9 @@ git -C data-collector-core/ pull --rebase
 echo "git -C data-collector-docker/ pull --rebase"
 git -C data-collector-docker/ pull --rebase
 
+echo "git -C data-collector-cron-docker/ pull --rebase"
+git -C data-collector-cron-docker/ pull --rebase
+
 echo "git -C data-collector-samples/ pull --rebase"
 git -C data-collector-samples/ pull --rebase
 

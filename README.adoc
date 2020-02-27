@@ -66,6 +66,7 @@ endif::[]
 == Known issues
 
 * CorrelationId is not generated correctly
+* Capture last event-list on entry HttpErrorException
 
 == New and improved features
 

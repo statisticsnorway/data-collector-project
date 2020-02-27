@@ -21,6 +21,9 @@ git clone git@github.com:statisticsnorway/data-collector-core.git
 echo "git clone git@github.com:statisticsnorway/data-collector-docker.git"
 git clone git@github.com:statisticsnorway/data-collector-docker.git
 
+echo "git clone git@github.com:statisticsnorway/data-collector-cron-docker.git"
+git clone git@github.com:statisticsnorway/data-collector-cron-docker.git
+
 echo "git clone git@github.com:statisticsnorway/data-collector-samples.git"
 git clone git@github.com:statisticsnorway/data-collector-samples.git
 
