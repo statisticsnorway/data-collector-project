@@ -1,0 +1,10 @@
+data-collector-api
+data-collector-server-base
+data-collector-testutils
+data-collector-connector-content-stream-rawdata
+data-collector-javascript-processor
+data-collector-core
+data-collector-docker
+data-collector-cron-docker
+data-collector-samples
+data-collection-consumer-specifications

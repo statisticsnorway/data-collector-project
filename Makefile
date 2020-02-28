@@ -7,14 +7,13 @@ default: | help
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-.PHONY: checkout
-checkout: ## Checkout code modules
-	@checkout.sh
+.PHONY: update-all
+update-all: ## Checkout/pull code modules
+	@./git-update.sh
 
-
-.PHONY: pull
-pull: ## Pull and rebase code modules
-	@pull.sh
+.PHONY: status-all
+status-all: ## Check local changes
+	@./git-status.sh
 
 .PHONY: build-asciidoc
 build-asciidoc: ## Build asciidoc
