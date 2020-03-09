@@ -1,6 +1,7 @@
 data-collector-api
 data-collector-server-base
 data-collector-testutils
+data-collector-connector-content-stream-discarding
 data-collector-connector-content-stream-rawdata
 data-collector-javascript-processor
 data-collector-core
