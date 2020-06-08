@@ -1,0 +1,6 @@
+data-collector-api
+data-collector-server-base
+data-collector-testutils
+data-collector-core
+data-collector-docker
+data-collector-samples
