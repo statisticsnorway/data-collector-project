@@ -14,7 +14,7 @@
     <inceptionYear>2019</inceptionYear>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>15</java.version>
         <module.build.sourceEncoding>UTF-8</module.build.sourceEncoding>
         <maven.javadoc.skip>true</maven.javadoc.skip>
 
