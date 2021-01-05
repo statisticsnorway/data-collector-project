@@ -9,3 +9,4 @@ data-collector-docker
 data-collector-cron-docker
 data-collector-samples
 data-collection-consumer-specifications
+data-collector-documentation
